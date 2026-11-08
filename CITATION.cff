@@ -1,0 +1,19 @@
+cff-version: 1.2.0
+message: "If you use these data or this code, please cite them as below."
+title: "Testbed data and analysis code for \"From Telemetry to Actionable Information\""
+type: dataset
+authors:
+  - family-names: Hassan
+    given-names: Ahmed
+    affiliation: Independent researcher
+    email: ahassanccna@gmail.com
+version: 1.0.0
+date-released: 2026-11-08
+license: CC-BY-4.0
+repository-code: "https://github.com/ahassan22/link-telemetry-testbed"
+keywords:
+  - network monitoring
+  - SNMP
+  - alerting
+  - gray failure
+  - information quality
