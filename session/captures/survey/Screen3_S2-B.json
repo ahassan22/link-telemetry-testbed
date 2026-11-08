@@ -1,0 +1,69 @@
+{
+ "scenario": "S2",
+ "variant": "B",
+ "screen": 3,
+ "fault_type": "copper_duplex_mismatch",
+ "target": "TPLINK",
+ "if_index": 49153,
+ "episode_start": "2026-11-03T18:41:04+03:00",
+ "reading_time": "2026-11-03T18:41:56.383+03:00",
+ "seconds_after_fault_start": 52.0,
+ "moment": 1,
+ "first_in_episode": true,
+ "trigger": {
+  "any_of": [
+   "late_collisions",
+   "fcs_errors",
+   "half_duplex"
+  ]
+ },
+ "trigger_met": "half duplex",
+ "history_clean": true,
+ "other_events_in_last_hour": [],
+ "axes": {
+  "rx_dbm": [
+   -20.0,
+   -3.0
+  ],
+  "traffic_mbps": [
+   0.0,
+   1000.0
+  ]
+ },
+ "values": {
+  "oper_status": "1",
+  "high_speed": "100",
+  "duplex_status": "2",
+  "in_mbps": 0.001,
+  "out_mbps": 0.002,
+  "in_errors_d": 0,
+  "fcs_errors_d": 0,
+  "late_collisions_d": 0,
+  "ddm_rx_power": ""
+ },
+ "baseline": {
+  "rows": 240,
+  "from_ts": 1793569384.824,
+  "to_ts": 1793572969.821,
+  "rx_mean": null,
+  "rx_min": null,
+  "rx_max": null,
+  "speed": 1000.0,
+  "errors_max": 0.0,
+  "crc_max": 0.0,
+  "late_max": 0.0
+ },
+ "alert_fixed": {
+  "fired": false,
+  "rule": "Rules: alert on link down, 10+ errors per interval",
+  "reasons": []
+ },
+ "alert_baseline": {
+  "fired": true,
+  "headline": "Speed 100 Mb/s, normally 1000",
+  "reasons": [
+   "Speed 100 Mb/s, normally 1000",
+   "Half duplex"
+  ]
+ }
+}

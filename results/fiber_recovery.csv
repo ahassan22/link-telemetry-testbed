@@ -1,0 +1,4 @@
+run,seconds_until_monitor_shows_normal_after_release
+run 1,553
+run 2,479
+run 3,505

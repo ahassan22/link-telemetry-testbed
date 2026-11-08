@@ -1,0 +1,2 @@
+start,role,inserted_at,removed_at,minutes_inserted,first_reading_showing_loss_s_after_insertion,rx_values_reported_dbm,drop_db_reported,settled_readings_with_loss_visible,B_alerted_on,A_alerted_on,B_first_alert_s_after_insertion,link_change_readings_at_insertion,B_alerts_on_link_change_at_insertion,in_errors_at_insertion,A_at_insertion,in_errors_at_removal,A_at_removal,B_still_alerting_s_after_window_end,monitor_shows_normal_s_after_removal
+2026-11-03 21:22:20,official,21:22:41,21:39:56,17.3,390,-8.8 -9.2,2.86 3.26,43,43,0,390,2,2,0.0,False,12.0,True,526,555

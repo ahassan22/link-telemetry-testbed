@@ -1,0 +1,9 @@
+screen,scenario,display,fault_type,target,if_index,reading_time,s_after_fault_start,history_clean,A_fired,B_fired,shown_alert,speed,duplex,rx_dbm,in_mbps,out_mbps,in_errors,out_errors,crc,late_collisions
+1,S1,A,fiber_bend,CISCO,10125,2026-11-02 22:18:41,1289.9,True,False,True,no active alerts,1000,full,-10.0,521.508,523.524,0,,0,0
+2,S1,B,fiber_bend,CISCO,10125,2026-11-02 22:18:41,1289.9,True,False,True,Rx power 4.1 dB below this link's normal (-5.9 dBm),1000,full,-10.0,521.508,523.524,0,,0,0
+3,S2,B,copper_duplex_mismatch,TPLINK,49153,2026-11-03 18:41:56,52.0,True,False,True,"Speed 100 Mb/s, normally 1000 · Half duplex",100,half,,0.001,0.002,0,,0,0
+4,S2,A,copper_duplex_mismatch,TPLINK,49153,2026-11-03 18:41:56,52.0,True,False,True,no active alerts,100,half,,0.001,0.002,0,,0,0
+5,S3,A,copper_bad_cable,TPLINK,49153,2026-11-03 15:30:05,50.7,True,False,True,no active alerts,100,full,,0.001,0.001,0,,0,0
+6,S3,B,copper_bad_cable,TPLINK,49153,2026-11-03 15:30:05,50.7,True,False,True,"Speed 100 Mb/s, normally 1000",100,full,,0.001,0.001,0,,0,0
+7,S4,B,planned_change,CISCO,10125,2026-11-03 21:29:11,411.0,True,False,True,Rx power 2.9 dB below this link's normal (-5.9 dBm),1000,full,-8.8,521.951,522.434,0,,0,0
+8,S4,A,planned_change,CISCO,10125,2026-11-03 21:29:11,411.0,True,False,True,no active alerts,1000,full,-8.8,521.951,522.434,0,,0,0

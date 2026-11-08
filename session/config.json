@@ -1,0 +1,135 @@
+{
+  "_comment": "Lab: monitoring from the switches only (agentless). PC1 -- Cisco Gi1/0/1; Cisco Gi1/0/25 == fiber == TP-Link port 25; TP-Link port 1 -- PC2. Cisco optical readings via ENTITY sensors (ddm_profile entity). The TP-Link SG2428P v5.30 exposes no optical readings.",
+  "interval_seconds": 15,
+  "timeout_seconds": 2,
+  "retries": 1,
+  "targets": [
+    {
+      "name": "CISCO",
+      "host": "cisco-switch",
+      "role": "switch",
+      "ddm_profile": "entity",
+      "interfaces": [
+        {
+          "if_index": 10101,
+          "label": "Cisco Gi1/0/1 (copper to PC1)"
+        },
+        {
+          "if_index": 10125,
+          "label": "Cisco Gi1/0/25 (fiber to TP-Link)",
+          "ddm": true
+        }
+      ]
+    },
+    {
+      "name": "TPLINK",
+      "host": "tplink-switch",
+      "role": "switch",
+      "interfaces": [
+        {
+          "if_index": 49177,
+          "label": "TP-Link port 25 (fiber to Cisco)"
+        },
+        {
+          "if_index": 49153,
+          "label": "TP-Link port 1 (copper to PC2)"
+        }
+      ]
+    }
+  ],
+  "links": [
+    {
+      "name": "Fiber Cisco - TP-Link",
+      "a": {
+        "target": "CISCO",
+        "if_index": 10125
+      },
+      "b": {
+        "target": "TPLINK",
+        "if_index": 49177
+      }
+    }
+  ],
+  "alerting": {
+    "window_minutes": 15,
+    "fixed": {
+      "rx_power_min_dbm": -14.0,
+      "errors_per_interval": 10,
+      "crc_per_interval": 10
+    },
+    "baseline": {
+      "learn_minutes": 60,
+      "rx_drop_db": 2.0,
+      "min_rows": 4
+    }
+  },
+  "traffic": {
+    "tool": "iperf3",
+    "bitrate": "500M",
+    "bidir": true
+  },
+  "capture": {
+    "enabled": true,
+    "screen_order": [
+      "S1-A",
+      "S1-B",
+      "S2-B",
+      "S2-A",
+      "S3-A",
+      "S3-B",
+      "S4-B",
+      "S4-A"
+    ],
+    "scenarios": [
+      {
+        "id": "S1",
+        "fault_type": "fiber_bend",
+        "target": "CISCO",
+        "if_index": 10125,
+        "title": "Fiber link · Cisco ↔ TP-Link",
+        "trigger": {
+          "rx_drop_db": 2.0
+        }
+      },
+      {
+        "id": "S2",
+        "fault_type": "copper_duplex_mismatch",
+        "target": "TPLINK",
+        "if_index": 49153,
+        "title": "Copper link · TP-Link port 1 ↔ PC 2",
+        "trigger": {
+          "any_of": [
+            "late_collisions",
+            "fcs_errors",
+            "half_duplex"
+          ]
+        }
+      },
+      {
+        "id": "S3",
+        "fault_type": "copper_bad_cable",
+        "target": "TPLINK",
+        "if_index": 49153,
+        "title": "Copper link · TP-Link port 1 ↔ PC 2",
+        "trigger": {
+          "any_of": [
+            "fcs_errors",
+            "speed_drop"
+          ]
+        },
+        "_comment": "Moved from Cisco Gi1/0/1 (PC1) on 2026-11-03: PC1 runs the monitoring, so a fault on its own link blinds the monitoring itself. PC2's link carries no monitoring traffic."
+      },
+      {
+        "id": "S4",
+        "fault_type": "planned_change",
+        "target": "CISCO",
+        "if_index": 10125,
+        "title": "Fiber link · Cisco ↔ TP-Link",
+        "trigger": {
+          "baseline_only": true
+        },
+        "_comment": "False alarm: a planned patch panel (extra patch cord and couplers) lowers Rx while the link stays healthy. The moment is the first reading where only Display B alerts, the link is up and error-free."
+      }
+    ]
+  }
+}

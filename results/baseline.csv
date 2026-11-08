@@ -1,0 +1,5 @@
+target,if_index,rows,rx_mean,rx_min,rx_max,speed,errors_max,crc_max,late_max
+CISCO,10101,240,,,,1000.0,0.0,0.0,0.0
+CISCO,10125,240,-5.94,-6.0,-5.9,1000.0,0.0,0.0,0.0
+TPLINK,49153,240,,,,1000.0,0.0,0.0,0.0
+TPLINK,49177,240,,,,1000.0,0.0,0.0,0.0

@@ -1,0 +1,15 @@
+run,label,logged_at,rx_end_of_step,drop_db,A_alerting_during_step,B_alerting_during_step,B_first_alert_after_step_s,B_still_alerting_after_release_s
+run 1,pen 1 turn,18:19:04,-6.5,0.56,False,False,,
+run 1,pen 2 turns,18:29:07,-6.6,0.66,False,False,,
+run 1,pen 3 turns,18:39:09,-6.9,0.96,False,False,,
+run 1,pen 4 turns,18:49:15,-7.4,1.46,False,False,,
+run 1,pen 5 turns,18:59:19,-7.7,1.76,False,False,,
+run 1,released,19:09:37,-6.1,0.16,False,False,,
+run 2,pen 5 turns,19:29:23,-7.3,1.36,False,False,,
+run 2,pen 10 turns,19:40:15,-9.0,3.06,False,True,514,
+run 2,pen 15 turns,19:51:35,-12.1,6.16,False,True,,
+run 2,released,20:00:50,-6.1,0.16,False,True,,464
+run 3,pen 5 turns,21:57:11,-7.3,1.36,False,False,,
+run 3,pen 10 turns,22:10:09,-10.0,4.06,False,True,512,
+run 3,pen 15 turns,22:20:28,-12.9,6.96,False,True,,
+run 3,released,22:30:16,-5.9,-0.04,False,True,,490

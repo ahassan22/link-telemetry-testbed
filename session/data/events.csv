@@ -1,0 +1,67 @@
+ts_local,ts_unix,phase,type,target,if_index,note
+2026-11-02T00:42:56.136+03:00,1793569376.136,start,baseline,,,
+2026-11-02T15:37:59.070+03:00,1793623079.071,point,note,,,"PC2 restarted by Windows Update around 12:00, traffic stopped until login (logged after the fact)"
+2026-11-02T15:42:27.525+03:00,1793623347.526,end,baseline,,,
+2026-11-02T16:00:41.924+03:00,1793624441.925,start,baseline,CISCO,10125,exploration: whiteboard marker then ballpoint pen
+2026-11-02T16:02:50.893+03:00,1793624570.894,point,note,,,marker 1 turn
+2026-11-02T16:05:02.804+03:00,1793624702.805,point,note,,,marker 2 turns
+2026-11-02T16:09:02.156+03:00,1793624942.156,point,note,,,marker 4 turns
+2026-11-02T16:11:06.684+03:00,1793625066.684,point,note,,,marker released
+2026-11-02T16:13:30.884+03:00,1793625210.885,point,note,,,pen 1 turn
+2026-11-02T16:17:55.700+03:00,1793625475.701,point,note,,,pen 3 turns
+2026-11-02T16:20:10.724+03:00,1793625610.724,point,note,,,pen 4 turns
+2026-11-02T16:22:45.620+03:00,1793625765.621,point,note,,,pen released
+2026-11-02T16:36:07.638+03:00,1793626567.638,end,baseline,CISCO,10125,
+2026-11-02T17:07:11.673+03:00,1793628431.673,start,fiber_bend,CISCO,10125,CLI vs SNMP refresh test: pen 3 turns
+2026-11-02T17:21:54.808+03:00,1793629314.809,point,note,,,
+2026-11-02T17:25:02.737+03:00,1793629502.737,point,note,,,released at about 17:17 (logged after the fact)
+2026-11-02T17:25:17.152+03:00,1793629517.152,point,note,CISCO,10125,released at about 17:17 (logged after the fact)
+2026-11-02T17:25:27.424+03:00,1793629527.424,end,fiber_bend,CISCO,10125,
+2026-11-02T18:19:04.342+03:00,1793632744.342,start,fiber_bend,CISCO,10125,"official bend run 1: ballpoint pen, taped, marked spot"
+2026-11-02T18:29:07.941+03:00,1793633347.941,point,note,CISCO,10125,pen 2 turns
+2026-11-02T18:39:09.676+03:00,1793633949.677,point,note,CISCO,10125,pen 3 turns
+2026-11-02T18:49:15.995+03:00,1793634555.996,point,note,CISCO,10125,pen 4 turns
+2026-11-02T18:59:19.155+03:00,1793635159.155,point,note,CISCO,10125,pen 5 turns
+2026-11-02T19:09:37.094+03:00,1793635777.095,point,note,CISCO,10125,released
+2026-11-02T19:10:10.939+03:00,1793635810.939,end,fiber_bend,CISCO,10125,
+2026-11-02T19:29:23.297+03:00,1793636963.298,start,fiber_bend,CISCO,10125,"official bend run 2: pen 5 turns, taped, marked spot"
+2026-11-02T19:40:15.897+03:00,1793637615.897,point,note,CISCO,10125,pen 10 turns
+2026-11-02T19:51:35.434+03:00,1793638295.435,point,note,CISCO,10125,pen 15 turns
+2026-11-02T20:00:50.496+03:00,1793638850.496,point,note,CISCO,10125,released
+2026-11-02T20:00:55.471+03:00,1793638855.472,end,fiber_bend,CISCO,10125,
+2026-11-02T20:56:58.525+03:00,1793642218.526,point,device_reboot,,,"lab app stopped ~20:55 and restarted to load capture update (fixed axes, clean-history rule), logged after the fact"
+2026-11-02T21:00:04.500+03:00,1793642404.500,point,note,CISCO,10125,"correction: the device_reboot point at 20:56:58 is the lab app restart, no device was rebooted"
+2026-11-02T21:57:11.657+03:00,1793645831.658,start,fiber_bend,CISCO,10125,"official bend run 3: pen 5 turns, taped, marked spot"
+2026-11-02T22:10:09.512+03:00,1793646609.512,point,note,CISCO,10125,pen 10 turns
+2026-11-02T22:20:28.688+03:00,1793647228.688,point,note,CISCO,10125,pen 15 turns
+2026-11-02T22:30:16.703+03:00,1793647816.703,point,note,CISCO,10125,released
+2026-11-02T22:30:51.871+03:00,1793647851.871,end,fiber_bend,CISCO,10125,
+2026-11-02T23:18:21.269+03:00,1793650701.269,start,copper_duplex_mismatch,TPLINK,49153,"duplex mismatch: PC2 NIC forced to 100 Mbps Full, TP-Link port 1 left on Auto"
+2026-11-02T23:28:05.388+03:00,1793651285.389,point,note,TPLINK,49153,restored: PC2 NIC back to Auto Negotiation
+2026-11-02T23:31:30.875+03:00,1793651490.876,end,copper_duplex_mismatch,TPLINK,49153,
+2026-11-03T00:01:34.235+03:00,1793653294.235,point,note,,,"lab app restarted to load display fixes (traffic tile, error chart) and testbed-wide clean-hour rule"
+2026-11-03T00:43:09.761+03:00,1793655789.761,start,copper_duplex_mismatch,TPLINK,49153,"duplex mismatch: PC2 NIC forced to 100 Mbps Full, TP-Link port 1 left on Auto"
+2026-11-03T00:50:43.832+03:00,1793656243.832,point,note,TPLINK,49153,restored: PC2 NIC back to Auto Negotiation
+2026-11-03T00:59:15.328+03:00,1793656755.328,end,copper_duplex_mismatch,TPLINK,49153,
+2026-11-03T00:59:39.551+03:00,1793656779.552,point,note,TPLINK,49153,"PC2 NIC restored to Auto at 00:50:43, speed back to 1000 at 00:51:38, Fault ended clicked late"
+2026-11-03T02:23:39.722+03:00,1793661819.723,start,copper_bad_cable,CISCO,10101,"bad cable: brown pair (pins 7-8) cut at one end, cable marked BAD, between PC1 and Cisco Gi1/0/1"
+2026-11-03T02:36:18.452+03:00,1793662578.452,point,note,CISCO,10101,restored: original good cable back between PC1 and Cisco Gi1/0/1
+2026-11-03T02:39:26.713+03:00,1793662766.714,end,copper_bad_cable,CISCO,10101,
+2026-11-03T03:04:58.382+03:00,1793664298.383,start,copper_bad_cable,TPLINK,49153,"smoke test, not an official run: BAD cable on PC2 link to check downshift and capture rule"
+2026-11-03T03:08:08.800+03:00,1793664488.800,point,note,TPLINK,49153,smoke test restored: good cable back on PC2
+2026-11-03T03:10:03.303+03:00,1793664603.304,end,copper_bad_cable,TPLINK,49153,
+2026-11-03T15:29:15.145+03:00,1793708955.146,start,copper_bad_cable,TPLINK,49153,"official bad cable run: brown pair (pins 7-8) cut at one end, cable marked BAD, on PC2 link"
+2026-11-03T15:39:25.257+03:00,1793709565.258,point,note,TPLINK,49153,restored: good cable back on PC2
+2026-11-03T15:39:37.218+03:00,1793709577.218,end,copper_bad_cable,TPLINK,49153,
+2026-11-03T16:57:37.117+03:00,1793714257.118,start,copper_duplex_mismatch,TPLINK,49153,"official duplex mismatch run: PC2 NIC forced to 100 Mbps Full, TP-Link port 1 left on Auto"
+2026-11-03T17:04:38.812+03:00,1793714678.812,point,note,TPLINK,49153,restored: PC2 NIC back to Auto Negotiation
+2026-11-03T17:08:06.059+03:00,1793714886.060,end,copper_duplex_mismatch,TPLINK,49153,
+2026-11-03T18:41:04.392+03:00,1793720464.393,start,copper_duplex_mismatch,TPLINK,49153,"official duplex mismatch run 4: PC2 NIC forced to 100 Mbps Full, TP-Link port 1 left on Auto"
+2026-11-03T18:48:28.357+03:00,1793720908.357,point,note,TPLINK,49153,restored: PC2 NIC back to Auto Negotiation
+2026-11-03T18:49:26.262+03:00,1793720966.263,end,copper_duplex_mismatch,TPLINK,49153,
+2026-11-03T19:07:53.280+03:00,1793722073.281,point,note,CISCO,10125,"coupler calibration with CLI, not an official run"
+2026-11-03T19:07:55.829+03:00,1793722075.830,start,hold,,,
+2026-11-03T20:00:21.684+03:00,1793725221.684,point,note,CISCO,10125,"   calibration done: 6 couplers + 7 patch cords incl. original, CLI Rx -6.0 -> -8.9 dBm, stable after reseat. chain kept assembled for S4"
+2026-11-03T20:12:05.355+03:00,1793725925.355,end,hold,,,
+2026-11-03T21:22:20.422+03:00,1793730140.422,start,planned_change,CISCO,10125,  S4 official: planned change emulated by inserting the calibrated chain (6 couplers + 7 patch cords incl. original)
+2026-11-03T21:40:10.847+03:00,1793731210.848,end,planned_change,CISCO,10125,
