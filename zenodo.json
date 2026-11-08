@@ -1,0 +1,12 @@
+{
+  "title": "Testbed data and analysis code for \"From Telemetry to Actionable Information\"",
+  "upload_type": "dataset",
+  "description": "<p>Raw SNMP readings, the fault event log, the two alerting rules (fixed limits and link baseline) and the analysis script that produces every table and figure in the paper <i>From Telemetry to Actionable Information: An Exploratory Testbed Study of Predictive Signals for Link Faults in Mixed Fiber–Copper Networks</i> (Ahmed Hassan, preprint, 2026).</p><p>Testbed: Cisco Catalyst 2960-X and TP-Link SG2428P joined by a single-mode fiber link, with a copper link to a PC; readings every 15 s over about 45 hours. Faults: fiber bend, copper duplex mismatch, damaged copper cable and a planned change on the fiber link. Device addresses and access credentials were removed.</p><p>Code is released under the MIT License; data and results under CC BY 4.0. The data-collection prototype is available from the author on request.</p>",
+  "creators": [
+    {"name": "Hassan, Ahmed", "affiliation": "Independent researcher"}
+  ],
+  "license": "cc-by-4.0",
+  "access_right": "open",
+  "keywords": ["network monitoring", "SNMP", "alerting", "gray failure", "fiber-optic networks", "information quality", "predictive maintenance", "testbed data"],
+  "version": "1.0.0"
+}
