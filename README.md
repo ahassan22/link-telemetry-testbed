@@ -1,4 +1,5 @@
 # From Telemetry to Actionable Information: testbed data and analysis
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.24054579.svg)](https://doi.org/10.5281/zenodo.24054579)
 
 Data and analysis code for the paper *From Telemetry to Actionable Information* by Ahmed Hassan (preprint, 2026).
 
